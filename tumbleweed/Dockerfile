@@ -2,7 +2,7 @@ FROM opensuse:tumbleweed
 MAINTAINER Pieter Hollants <pieter@hollants.com>
 
 # Get the latest base updates
-RUN zypper --non-interactive --gpg-auto-import-keys refresh && zypper --non-interactive update
+RUN zypper --non-interactive --gpg-auto-import-keys refresh && zypper --non-interactive update && zypper clean -a
 
 # When run as a container directly, print number of available updates. This allows
 # running a cronjob on the Docker like this:
