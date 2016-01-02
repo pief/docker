@@ -9,7 +9,7 @@ RUN zypper --non-interactive --gpg-auto-import-keys refresh && \
     rm /var/log/*.log
 
 # When run as a container directly, print number of available updates. This allows
-# running a cronjob on the Docker like this:
+# running a cronjob on the Docker host like this:
 #
 #   [[ $(docker run --rm pief/tumbleweed | tr -d '\r') != "0" ]] && docker build -t pief/tumbleweed --no-cache https://github.com/pief/docker.git#:tumbleweed && docker push pief/tumbleweed
 #
