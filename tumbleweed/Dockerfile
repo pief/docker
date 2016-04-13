@@ -1,4 +1,6 @@
-FROM opensuse:tumbleweed
+# See https://hub.docker.com/r/opensuse/amd64/
+#FROM opensuse:tumbleweed
+FROM opensuse/amd64:tumbleweed
 MAINTAINER Pieter Hollants <pieter@hollants.com>
 
 # Get the latest base updates
