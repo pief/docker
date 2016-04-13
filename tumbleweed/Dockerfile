@@ -5,7 +5,7 @@ MAINTAINER Pieter Hollants <pieter@hollants.com>
 
 # Get the latest base updates
 RUN zypper --non-interactive --gpg-auto-import-keys refresh && \
-    zypper --non-interactive update && \
+    zypper --non-interactive update --no-recommends && \
     zypper clean -a && \
     find /usr/share/locale -name *.mo -exec rm {} \; && \
     rm /var/log/*.log
